@@ -16,7 +16,7 @@ cube = TriangleMesh(identity())
 scene = Scene(width, height)
 v = Vec3(1, 0, 0)
 v.apply_pipeline(identity(), scene)
-speed = 0.1
+speed = 0.05
 
 
 while True:
@@ -26,17 +26,17 @@ while True:
             sys.exit()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_KP_PLUS:
-                cube = cube.apply_scaling(Vec3(2, 2, 2))
+                cube = cube.apply_scaling(Vec3(1.2, 1.2, 1.2))
             if event.key == pygame.K_KP_MINUS:
-                cube = cube.apply_scaling(Vec3(1/2, 1/2, 1/2))
+                cube = cube.apply_scaling(Vec3(1/1.2, 1/1.2, 1/1.2))
             if event.key == pygame.K_LEFT:
-                cube = cube.apply_translation(Vec3(-1, 0, 0))
+                cube = cube.apply_translation(Vec3(-0.5, 0, 0))
             if event.key == pygame.K_RIGHT:
-                cube = cube.apply_translation(Vec3(1, 0, 0))
+                cube = cube.apply_translation(Vec3(0.5, 0, 0))
             if event.key == pygame.K_UP:
-                cube = cube.apply_translation(Vec3(0, -1, 0))
+                cube = cube.apply_translation(Vec3(0, -0.5, 0))
             if event.key == pygame.K_DOWN:
-                cube = cube.apply_translation(Vec3(0, 1, 0))
+                cube = cube.apply_translation(Vec3(0, 0.5, 0))
             if event.key == pygame.K_q:
                 cube = cube.apply_rotation(Vec3(0, 1, 0), speed)
             if event.key == pygame.K_d:
