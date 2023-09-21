@@ -30,7 +30,7 @@ keys_pressed = {
     pygame.K_s: False
 }
 last_action_time = 0
-action_delay = 100
+action_delay = 50
 while True:
     current_time = pygame.time.get_ticks()
 
